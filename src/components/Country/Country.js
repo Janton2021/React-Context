@@ -1,5 +1,6 @@
 import { useContext } from 'react'
-import context from '../state/context'
+import context from '../../state/context'
+import './index_Country.css'
 
 
 const Country = () => {
@@ -9,9 +10,10 @@ const Country = () => {
         <div>
             {countries.map((e, i) => {
                 return (
-                   <div key={i}>
-                    <img key={i} src={e.flag} alt="" />
-                   </div>
+                    <section className="country" key={i}>
+                    <img className="image" key={i} src={e.flag} alt="" />
+                    <p className="name">{e.name}</p>
+                   </section>
                  ) 
                 
             })
@@ -21,4 +23,8 @@ const Country = () => {
     )
 }
 
+
 export default Country
+
+
+
